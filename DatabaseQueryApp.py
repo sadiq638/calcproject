@@ -35,6 +35,6 @@ def email_lookup(email):
 		print(items)
 	connection.commit()
 	connection.close()
-email_lookup('ramos@outlook.com')
+
 
 
