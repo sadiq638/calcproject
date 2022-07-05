@@ -26,7 +26,7 @@ def add_many_record(list):
 	connection.commit()
 	connection.close()
 def email_lookup(email):
-	""" this function fetches all records in a table baed on certain condtions (email id)"""
+	""" this function fetches all records in a table based on certain condtions (email id)"""
 	connection=sqlite3.connect('customer.db')
 	c=connection.cursor()
 	c.execute("SELECT rowid, * FROM customer WHERE email_id = (?)", (email,))
