@@ -1,0 +1,22 @@
+table, tr, td{
+    border:1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+button{
+    height:45px;
+    width:45px;
+    background-color: rgb(18, 224, 139);
+    border-radius: 50%;
+}
+button:active{
+    background-color: rgb(224, 210, 18);
+}
+#equal{
+    color:aliceblue;
+    background-color:black;
+}
