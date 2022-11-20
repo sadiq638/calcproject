@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>weather api</title>
+        <link rel="stylesheet" href="st.css" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+            $("#btn").click(function(){
+                var x=$("#city").val()
+                var key='7ee8a1bbf4f9a5fab0e18f261ea1633f'
+                var url="https://api.openweathermap.org/data/2.5/weather?" + $.param({q:x, appid:key, units:"metric"})
+                fetch(url)
+                .then(res => res.json())
+                .then(data =>{$("#temp").text("the current temprature: " + " "+ data['main']['temp']);
+                              $("#max").text("the maximum temprature: " +" "+ data['main']['temp_max']);
+                              $("#humidity").text("humidity level:  " +" "+ data['main']['humidity'])})
+                
+            });
+                
+        });
+        </script>
+    </head>
+    <body>
+        <section>
+        <p>enter the name of the city to know the weather</p>
+        <p><input type="textbox" id="city"></p>
+        <p><button id="btn">submit</button></body></p>
+        <p style="color:red" id="temp"></p>
+        <p style="color:green" id="max"></p>
+        <p style="color:blue" id="humidity"></p>
+        
+               
+         
+        </section>
+    </body>
+
+</html>
